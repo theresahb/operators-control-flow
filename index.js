@@ -19,3 +19,25 @@ else if (classGroup === 'Arts' || classGroup === 'arts') {
 else {
     console.log('General subjects: ' + generalSubjects);
 }
+
+
+// Question 5
+
+function findNearestPowerOf2(num) {
+    let pwr = 1;
+    let currentPowerOf2 = 1;
+  
+    while (currentPowerOf2 < num) {
+      currentPowerOf2 *= 2;
+      pwr *= 2;
+    }
+  
+    if (currentPowerOf2 - num > num - currentPowerOf2 / 2 && pwr > 1) {
+      pwr /= 2;
+    }
+  
+    console.log("The number " + pwr + " is the power of 2 nearest to " + num);
+  
+}
+
+findNearestPowerOf2(40);
